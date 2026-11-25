@@ -1,0 +1,52 @@
+FITTDATE WEB SİTESİ
+===================
+
+Mağazaların istediği sayfalar:
+  index.html        -> Ana sayfa (App Store'da "Pazarlama URL'si", Google Play'de "Web sitesi")
+  gizlilik.html     -> Gizlilik Politikası (iki mağaza da zorunlu istiyor)
+  aydinlatma.html   -> KVKK Aydınlatma Metni
+  kosullar.html     -> Kullanım Koşulları (Gold abonelik şartları burada; Apple istiyor)
+  kurallar.html     -> Topluluk Kuralları
+  hesap-silme.html  -> Hesap silme (Google Play zorunlu istiyor)
+  destek.html       -> Destek (App Store'da "Destek URL'si")
+  app-ads.txt       -> AdMob reklam doğrulaması
+  stil.css, ikon.png
+
+Metinler uygulamadaki yasal metinlerle aynı. Sarı [●] yerler: adres ve e-posta.
+E-postanı ve adresini verince siteyi yeniden üretirim.
+
+
+YAYINLAMA (GitHub Pages, ücretsiz)
+----------------------------------
+1) github.com'da hesap aç (yoksa).
+2) Sağ üstte + -> New repository.
+   Repository name: KULLANICIADIN.github.io   (KULLANICIADIN = GitHub kullanıcı adın, aynen)
+   Public seç -> Create repository.
+   Bu isim önemli: app-ads.txt sitenin en üstünde olmak zorunda, bu isimle oraya düşer.
+3) Açılan sayfada "uploading an existing file" linkine tıkla.
+   Bu klasördeki TÜM dosyaları sürükle bırak (OKU-BENI.txt hariç) -> Commit changes.
+4) Settings -> Pages -> Source: "Deploy from a branch", Branch: main, klasör: / (root) -> Save.
+5) 1-2 dakika sonra site açılır:
+   https://KULLANICIADIN.github.io
+   https://KULLANICIADIN.github.io/gizlilik.html
+   https://KULLANICIADIN.github.io/hesap-silme.html
+   https://KULLANICIADIN.github.io/destek.html
+
+
+MAĞAZALARA YAZILACAKLAR
+-----------------------
+App Store Connect:
+  Gizlilik Politikası URL'si -> .../gizlilik.html
+  Destek URL'si              -> .../destek.html
+  Pazarlama URL'si           -> https://KULLANICIADIN.github.io
+
+Google Play Console:
+  Gizlilik politikası        -> .../gizlilik.html
+  Hesap silme URL'si         -> .../hesap-silme.html
+  Web sitesi                 -> https://KULLANICIADIN.github.io   (app-ads.txt bunu kontrol eder)
+
+
+APP-ADS.TXT
+-----------
+AdMob hesabını açınca Ayarlar'da "Yayıncı kimliği" (pub-...) görünür.
+app-ads.txt içindeki pub-0000000000000000 kısmını onunla değiştir (GitHub'da dosyaya tıkla -> kalem simgesi -> Commit).
